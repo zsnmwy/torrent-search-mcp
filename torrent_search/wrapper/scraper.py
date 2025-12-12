@@ -113,6 +113,11 @@ WEBSITES: dict[str, dict[str, str | list[str]]] = {
         parsing="markdown",
         exclude_patterns=["local_links"],
     ),
+    "sukebei.nyaa.si": dict(
+        search="https://sukebei.nyaa.si/?f=0&c=0_0&q={query}&s=seeders&o=desc",
+        parsing="markdown",
+        exclude_patterns=["local_links"],
+    ),
 }
 
 crawler = AsyncWebCrawler(config=BROWSER_CONFIG, always_bypass_cache=True)
